@@ -4549,7 +4549,7 @@ begin
   else
     s:=nil;
 
-  ss:=TStringStream.create('',TEncoding.Default,false);
+  ss:=TStringStream.Create('');
   if (s<>nil) and (sl>0) then
   begin
     ss.WriteBuffer(s^, sl);
@@ -8448,7 +8448,7 @@ begin
     postrings:=Tstringlist.create;
     try
       filename:=Lua_ToString(L, 1);
-      postrings.LoadFromFile(filename, true);
+      postrings.LoadFromFile(filename);
       if assigned(LRSTranslator) then
       begin
         if (LRSTranslator is TPOTranslator) then

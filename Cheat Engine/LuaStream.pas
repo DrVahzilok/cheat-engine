@@ -216,7 +216,7 @@ begin
     if lua_istable(L, 1) then
     begin
       if lua_gettop(L)>=2 then
-        count:=min(lua_objlen(L, 1), lua_tointeger(L, 2)) //prevent the length from exeeding the table
+        count:=min(Int64(lua_objlen(L, 1)), Int64(lua_tointeger(L, 2))) //prevent the length from exeeding the table
       else
         count:=lua_objlen(L, 1);
 

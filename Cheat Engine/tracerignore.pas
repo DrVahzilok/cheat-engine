@@ -40,7 +40,7 @@ begin
     donottrace:=tstringlist.create;
 
     try
-      donottrace.LoadFromFile(s, true);
+      donottrace.LoadFromFile(s);
 
       i:=0;
       while i<donottrace.Count do

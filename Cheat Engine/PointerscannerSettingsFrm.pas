@@ -484,7 +484,7 @@ begin
   lblfilename.ShowHint:=true;
 
   if fileexists(filename+'.addresslist') then
-    tstrings(cbAddress.tag).LoadFromFile(filename+'.addresslist',true);
+    tstrings(cbAddress.tag).LoadFromFile(filename+'.addresslist');
 
   UpdateAddressList(cbAddress);
 
@@ -1036,7 +1036,7 @@ begin
 
         if fileexists(odLoadPointermap.FileName+'.addresslist') then
         begin
-          tstrings(cbAddress.tag).LoadFromFile(odLoadPointermap.FileName+'.addresslist', true);
+          tstrings(cbAddress.tag).LoadFromFile(odLoadPointermap.FileName+'.addresslist');
           UpdateAddressList(cbAddress);
         end;
 
@@ -1269,7 +1269,7 @@ begin
   begin
     //get the addresslist from the scandata.addresslist file (if it exists)
     if fileexists(odLoadPointermap.filename+'.addresslist') then
-      tstrings(cbAddress.tag).LoadFromFile(odLoadPointermap.filename+'.addresslist', true);
+      tstrings(cbAddress.tag).LoadFromFile(odLoadPointermap.filename+'.addresslist');
   end
   else
     MainForm.addresslist.getAddressList(tstrings(cbAddress.tag));

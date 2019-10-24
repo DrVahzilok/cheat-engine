@@ -4855,7 +4855,7 @@ begin
 
     commonModuleList.Clear;  
     try
-      commonModuleList.LoadFromFile(s,true);
+      commonModuleList.LoadFromFile(s);
 
       for i:=commonModuleList.Count-1 downto 0 do
       begin

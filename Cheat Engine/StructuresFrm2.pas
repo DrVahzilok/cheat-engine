@@ -5387,7 +5387,7 @@ begin
         baseoffset:=e.Offset+e.Bytesize;
 
       doc:=nil;
-      ss:=TStringStream.create(clipboard.AsText,TEncoding.Default, false);
+      ss:=TStringStream.create(clipboard.AsText);
       try
         try
           ReadXMLFile(doc, ss);
@@ -5468,7 +5468,7 @@ begin
     end;
 
 
-    ms:=TStringStream.create('',TEncoding.Default,false);
+    ms:=TStringStream.Create('');
     WriteXML(elementnodes, ms);
 
     Clipboard.AsText:=ms.DataString;
